@@ -132,8 +132,7 @@ export const getWaitlistStats = async (): Promise<WaitlistStats> => {
 			.from('waitlist_subscribers')
 			.select('*')
 			.eq('unsubscribed', false)
-			.order('created_at', { ascending: false })
-			.limit(10);
+			.order('created_at', { ascending: false });
 
 		// Get signup trends for chart (last 7 days)
 		const signupTrends = [];
