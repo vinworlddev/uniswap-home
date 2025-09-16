@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Layout from './layout/Layout';
 import { useThemeMode } from 'flowbite-react';
@@ -33,37 +33,7 @@ const App = () => {
   return (
 
     <>
-      {/* <Router>
-        <AuthProvider>
-          <Routes>
-            <Route path="/admin" element={
-              <ProtectedRoute requiredRole="admin">
-                <Layout />
-              </ProtectedRoute>
-            }>
-              
-               
-              <Route path="admin" element={<Admin />} />
-            </Route>
-
-           
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/unauthorized"
-              element={
-                <div className="min-h-screen flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-2xl font-bold text-red-600">Unauthorized</h1>
-                    <p className="text-gray-600 mt-2">You don't have permission to access this page.</p>
-                  </div>
-                </div>
-              }
-            />
-          </Routes>
-        </AuthProvider>
-      </Router> */}
-      <BrowserRouter>
+      <Router>
         <AuthProvider>
           {/* <Routes>
             <Route path="/" element={<Layout />} />
@@ -105,7 +75,7 @@ const App = () => {
             </Route>
           </Routes>
         </AuthProvider>
-      </BrowserRouter>
+      </Router>
     </>
   )
 }
