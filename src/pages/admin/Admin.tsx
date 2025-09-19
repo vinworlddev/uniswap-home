@@ -43,6 +43,7 @@ const Admin = () => {
 
 			{/* Recent Subscribers Table */}
 			<h3 className="mb-4 text-lg font-semibold">Recent Subscribers</h3>
+			
 			<div className="overflow-x-auto">
 				<Table>
 					<TableHead>
