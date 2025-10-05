@@ -35,22 +35,6 @@ const App = () => {
     <>
       <Router>
         <AuthProvider>
-          {/* <Routes>
-            <Route path="/" element={<Layout />} />
-            <Route index element={<Home />} />
-            <Route
-              path="/admin"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <Admin />
-                </ProtectedRoute>
-              }
-            />
-
-            <Route path="/unauthorized" element={<p>Unauthorized</p>} />
-            <Route path="/login" element={<p>Login page here</p>} />
-          </Routes> */}
-
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
