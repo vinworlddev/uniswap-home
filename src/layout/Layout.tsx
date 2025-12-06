@@ -1,8 +1,10 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import "./Footer.css"; // ✅ Import Footer CSS
+import Footer from "./Footer";
 
 const Layout = () => {
-	const { user, signOut } = useAuth(); // ✅ include user
+	const { user, signOut } = useAuth();
 	const navigate = useNavigate();
 
 	const logout = async () => {
@@ -12,7 +14,7 @@ const Layout = () => {
 		try {
 			await signOut();
 			window.alert("You have been logged out successfully.");
-			navigate("/login"); // ✅ redirect to login
+			navigate("/login");
 		} catch (err) {
 			console.error(err);
 			window.alert("Something went wrong while logging out.");
@@ -20,19 +22,17 @@ const Layout = () => {
 	};
 
 	return (
-		<div className="relative">
+		<div className="relative min-h-screen flex flex-col">
 			<div className="floating-elements">
 				<div className="floating-circle circle-1"></div>
 				<div className="floating-circle circle-2"></div>
 				<div className="floating-circle circle-3"></div>
 			</div>
 
-
 			<header className="header">
 				<div className="!max-w-7xl !mx-auto px-4">
 					<div className="flex justify-between items-center">
 						<div className="w-full">
-
 							<Link to="/">
 								<div className="logo">
 									<img className="h-16 md:h-20" src="assets/images/logo.png" alt="logo" />
@@ -60,10 +60,15 @@ const Layout = () => {
 				</div>
 			</header>
 
+			{/* Main content with flex-1 to push footer down */}
+			<main className="flex-1">
+				<div className="!max-w-7xl mx-auto px-4 my-8">
+					<Outlet />
+				</div>
+			</main>
 
-			<div className="!max-w-7xl mx-auto px-4 my-8">
-				<Outlet />
-			</div>
+			{/* ✅ Add Footer */}
+			<Footer />
 		</div>
 	);
 };

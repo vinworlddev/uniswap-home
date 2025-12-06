@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/home/Home';
 import Admin from './pages/admin/Admin';
 import Login from './pages/auth/Login';
+import ServiceLevelAgreement from './pages/sla/ServiceLevelAgreement_1';
 
 type ThemeMode = "light" | "dark";
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
                 </ProtectedRoute>
               } />
               <Route path="/login" element={<Login />} />
+              <Route path="/sla" element={<ServiceLevelAgreement />} />
               <Route
                 path="/unauthorized"
                 element={

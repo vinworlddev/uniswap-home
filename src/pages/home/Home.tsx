@@ -87,7 +87,9 @@ const Home = () => {
 			<section className="hero">
 				<div className="hero-badge">🚀 Coming Soon</div>
 				<h1 className="hero-title">Your Trusted Marketplace</h1>
-				<p className="hero-subtitle">Buy and sell new or used products with confidence. Secure escrow payments, built-in wallet, and dedicated account numbers make trading safe and simple.</p>
+				<p className="hero-subtitle">Buy and sell new or used products with confidence. Secure escrow payments,
+					built-in wallet, and dedicated account numbers make trading safe and simple.
+				</p>
 			</section>
 
 			<section className="waitlist-section">
@@ -138,19 +140,25 @@ const Home = () => {
 				<div className="feature-card">
 					<div className="feature-icon">🛡️</div>
 					<h3 className="feature-title">Escrow Protection</h3>
-					<p className="feature-description">Your money stays safe in escrow until you confirm receipt. Both buyers and sellers are protected throughout every transaction.</p>
+					<p className="feature-description">Your money stays safe in escrow until you confirm receipt.
+						Both buyers and sellers are protected throughout every transaction.
+					</p>
 				</div>
 
 				<div className="feature-card">
 					<div className="feature-icon">💳</div>
 					<h3 className="feature-title">Built-in Wallet</h3>
-					<p className="feature-description">Get your dedicated account number for easy wallet top-ups. Make instant transfers and manage your funds with complete control.</p>
+					<p className="feature-description">Get your dedicated account number for easy wallet top-ups.
+						Make instant transfers and manage your funds with complete control.
+					</p>
 				</div>
 
 				<div className="feature-card">
 					<div className="feature-icon">📦</div>
 					<h3 className="feature-title">List Anything</h3>
-					<p className="feature-description">Upload new or used products with photos and descriptions. From electronics to fashion, sell anything quickly and safely.</p>
+					<p className="feature-description">Upload new or used products with photos and descriptions. From electronics to fashion,
+						sell anything quickly and safely.
+					</p>
 				</div>
 			</section>
 			
