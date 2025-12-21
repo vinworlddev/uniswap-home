@@ -2,6 +2,8 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import "./Footer.css"; // ✅ Import Footer CSS
 import Footer from "./Footer";
+import ScrollToTop from "../components/toTop/ScrollToTop";
+import FloatingNav from "../components/floatingNav/FloatingNav";
 
 const Layout = () => {
 	const { user, signOut } = useAuth();
@@ -69,6 +71,11 @@ const Layout = () => {
 
 			{/* ✅ Add Footer */}
 			<Footer />
+			{/* Add Scroll to Top Button */}
+			<ScrollToTop />
+
+			{/* Add Floating Navigation */}
+			<FloatingNav />
 		</div>
 	);
 };

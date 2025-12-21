@@ -8,6 +8,7 @@
     sans-serif;
   line-height: 1.6;
   color: #333;
+  overflow-x: hidden;
 }
 
 .sla-header {
@@ -118,7 +119,7 @@
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
+  overflow:auto;
 }
 
 .definitions-table td {
@@ -146,7 +147,7 @@
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow: auto; */
 }
 
 .contact-table thead {
@@ -189,7 +190,7 @@
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow: auto; */
 }
 
 .support-table thead {
@@ -301,10 +302,13 @@
   }
 }
 
+
+
 /* Responsive design */
 @media (max-width: 768px) {
   .sla-container {
     padding: 20px 0px;
+    overflow: hidden;
   }
   
   .sla-header h1 {
@@ -318,9 +322,6 @@
   .sla-container section {
     padding: 20px 10px;
   }
-
-    
-
   
   .sla-container section h2 {
     font-size: 1.5rem;
@@ -333,6 +334,8 @@
   .signature-lines {
     grid-template-columns: 1fr;
   }
+
+   
   
   .definitions-table,
   .contact-table,

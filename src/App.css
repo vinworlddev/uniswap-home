@@ -16,6 +16,13 @@
 	--text-secondary: #cbd5e1;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 body {
 	font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 	background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 50%, var(--primary-green) 100%);
@@ -29,6 +36,13 @@ body {
 	margin: 0 auto;
 	padding: 0 20px;
 } */
+
+.table-wrapper {
+	overflow-x: auto;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	/* smooth scrolling on iPhone */
+}
 
 .header {
 	/* display: flex;

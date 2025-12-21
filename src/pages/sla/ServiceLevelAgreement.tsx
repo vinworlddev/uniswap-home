@@ -1,6 +1,6 @@
 import './ServiceLevelAgreement.css';
 
-const ServiceLevelAgreement = () => { 
+const ServiceLevelAgreement = () => {
   return (
     <div className="sla-container">
       <div className="sla-header">
@@ -15,28 +15,28 @@ const ServiceLevelAgreement = () => {
       <div className="sla-content">
         <section className="agreement-intro">
           <p>This Agreement is made this [3rd] day of December, 2025.</p>
-          
+
           <h3>BETWEEN</h3>
           <p>
-            <strong>DOJAH TECHNOLOGIES LIMITED</strong>, a company incorporated under the laws of the 
-            Federal Republic of Nigeria, with RC Number: 1885308 whose registered address is 
-            at No 3-8 Koleosho Street off Medical Road, Ikeja, Lagos State, Nigeria (hereinafter 
-            referred to as '<strong>THE COMPANY</strong>' which expression shall where the context so admits, 
+            <strong>DOJAH TECHNOLOGIES LIMITED</strong>, a company incorporated under the laws of the
+            Federal Republic of Nigeria, with RC Number: 1885308 whose registered address is
+            at No 3-8 Koleosho Street off Medical Road, Ikeja, Lagos State, Nigeria (hereinafter
+            referred to as '<strong>THE COMPANY</strong>' which expression shall where the context so admits,
             include its successors-in-title, assigns and affiliates) of the first part.
           </p>
 
           <h3>AND</h3>
           <p>
-            <strong>UNISWAPNG</strong>, a company incorporated under the laws of the Federal Republic of 
-            Nigeria, with RC Number: ………… whose registered address is at No 7 Dosumu Aina 
-            Estate, Gbagada, Lagos State, Nigeria (hereinafter referred to as '<strong>THE CLIENT</strong>' 
-            which expression shall where the context so admits, include its successors-in-title, 
+            <strong>UNISWAPNG</strong>, a company incorporated under the laws of the Federal Republic of
+            Nigeria, with RC Number: ………… whose registered address is at No 7 Dosumu Aina
+            Estate, Gbagada, Lagos State, Nigeria (hereinafter referred to as '<strong>THE CLIENT</strong>'
+            which expression shall where the context so admits, include its successors-in-title,
             assigns and affiliates) of the second part.
           </p>
 
           <p>
-            For the purposes of this Agreement and any alteration/modification hereto, the 
-            Company and the Client shall, wherever the context requires, be referred to 
+            For the purposes of this Agreement and any alteration/modification hereto, the
+            Company and the Client shall, wherever the context requires, be referred to
             individually as a "Party" or collectively as "Parties".
           </p>
 
@@ -52,10 +52,10 @@ const ServiceLevelAgreement = () => {
 
         <section className="definitions">
           <h2>1. DEFINITIONS AND INTERPRETATIONS</h2>
-          
+
           <h3>1.1 Definitions</h3>
           <p>In this Agreement, the following expressions shall have the meanings ascribed to them below, unless the context clearly indicates the contrary:</p>
-          
+
           <table className="definitions-table">
             <tbody>
               <tr>
@@ -200,7 +200,7 @@ const ServiceLevelAgreement = () => {
         <section className="customer-data">
           <h2>8. CUSTOMERS DATA</h2>
           <p><strong>8.1</strong> The Client acknowledges that it does not own the personal data of its Customers but retains all rights, title, and interest in and to its trade secrets and other confidential information provided under this Agreement. As the data controller, the Client shall bear sole responsibility and liability for obtaining Customer Data and for ensuring the legality, reliability, authenticity, integrity, accuracy, content, completeness, availability, and quality of such data in accordance with applicable data protection laws.</p>
-          
+
           <p><strong>8.2</strong> The Client represents and warrants that it will not create, edit, store, post, upload, distribute or transmit, while using Dojah API, or otherwise make available through Dojah API, any Customer Data that:</p>
           <ul>
             <li><strong>8.2.1</strong> is unlawful, harmful, threatening, defamatory, offensive, obscene, infringing, harassing or racially or ethnically offensive; and/or</li>
@@ -383,40 +383,42 @@ const ServiceLevelAgreement = () => {
           <h2>22. NOTICES</h2>
           <p>Any notice, approval or request required or permitted to be given or made under this Agreement shall be in writing and in English Language. Such notice, approval or request shall be deemed to be duly given or made when it shall have been delivered by email, or hand delivery to the other Party and marked for the attention of the person set out below or such address, number electronic mail address or person as that Party may notify the other from time to time in accordance with this clause;</p>
 
-          <table className="contact-table">
-            <thead>
-              <tr>
-                <th colSpan={2}>COMPANY</th>
-                <th colSpan={2}>CLIENT</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Attention</td>
-                <td>Tobi Ololade</td>
-                <td>Attention</td>
-                <td>Akinbobola Ainnah</td>
-              </tr>
-              <tr>
-                <td>Email</td>
-                <td><a href="mailto:support@dojah.io">support@dojah.io</a></td>
-                <td>Email</td>
-                <td><a href="mailto:support@uniswapng.com">support@uniswapng.com</a></td>
-              </tr>
-              <tr>
-                <td>Address</td>
-                <td>3-8, Koleosho Street, Off Medical Road, Ikeja, Lagos State, Nigeria.</td>
-                <td>Address</td>
-                <td>7 Dosumu Aina Estate, Gbagada, Lagos State, Nigeria</td>
-              </tr>
-              <tr>
-                <td>Phone No</td>
-                <td></td>
-                <td>Phone No</td>
-                <td>09028839189</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className='table-wrapper'>
+            <table className="contact-table">
+              <thead>
+                <tr>
+                  <th colSpan={2}>COMPANY</th>
+                  <th colSpan={2}>CLIENT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Attention</td>
+                  <td>Tobi Ololade</td>
+                  <td>Attention</td>
+                  <td>Akinbobola Ainnah</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td><a href="mailto:support@dojah.io">support@dojah.io</a></td>
+                  <td>Email</td>
+                  <td><a href="mailto:support@uniswapng.com">support@uniswapng.com</a></td>
+                </tr>
+                <tr>
+                  <td>Address</td>
+                  <td>3-8, Koleosho Street, Off Medical Road, Ikeja, Lagos State, Nigeria.</td>
+                  <td>Address</td>
+                  <td>7 Dosumu Aina Estate, Gbagada, Lagos State, Nigeria</td>
+                </tr>
+                <tr>
+                  <td>Phone No</td>
+                  <td></td>
+                  <td>Phone No</td>
+                  <td>09028839189</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="compliance">
@@ -461,9 +463,9 @@ const ServiceLevelAgreement = () => {
 
         <section className="schedules">
           <h2>SCHEDULE 1 - DATA PROCESSING REQUIREMENTS</h2>
-          
+
           <h3>1. ROLES AND RESPONSIBILITIES</h3>
-          
+
           <h4>1.1 Responsibility of Parties</h4>
           <p><strong>1.1.1</strong> The Parties shall at all times during the Term of this Agreement maintain appropriate technical and security measures to protect any Customer's Data, or each Party's Data which the Parties collects, accesses or processes in connection with this Agreement against unauthorised or unlawful use, disclosure, processing or alteration ("Security Incidents"). The Parties shall act only on with the agreed terms between each other in relation to the collection, use, disclosure and processing of any data, but in all instances in accordance with all Applicable Laws, rules and regulations including the Nigeria Data Protection Act, 2023 (NDPA).</p>
 
@@ -542,40 +544,42 @@ const ServiceLevelAgreement = () => {
           <h2>SCHEDULE 2 - SUPPORT AND RESOLUTION TIMELINES</h2>
           <p>The table below shows the priority assigned to issues and service requests according to the perceived importance of the reported situation. The "Response Time" refers to how long it will take the Company to give a reply to the Client pending when a resolution is gotten. The resolution time refers to how long it would take the Company to provide a resolution to a complaint.</p>
 
-          <table className="support-table">
-            <thead>
-              <tr>
-                <th>Issue Category</th>
-                <th>Issue Sub-Category</th>
-                <th>Response Timelines</th>
-                <th>Issue Resolution Time</th>
-                <th>Contact Information</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Technical Issues</td>
-                <td>Bugs and Fixes</td>
-                <td>The client shall receive an acknowledgement response fifteen (15) minutes after receipt of each request. Dojah shall respond promptly to all requests for support services made by the client through the helpdesk.</td>
-                <td>1-3 hours (Dojah shall communicate to the client if the issue cannot be resolved within this timeline)</td>
-                <td><a href="mailto:support@dojah.io">support@dojah.io</a></td>
-              </tr>
-              <tr>
-                <td>New feature requests</td>
-                <td></td>
-                <td></td>
-                <td>Dependent on request</td>
-                <td><a href="mailto:support@dojah.io">support@dojah.io</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className='table-wrapper'>
+            <table className="support-table">
+              <thead>
+                <tr>
+                  <th>Issue Category</th>
+                  <th>Issue Sub-Category</th>
+                  <th>Response Timelines</th>
+                  <th>Issue Resolution Time</th>
+                  <th>Contact Information</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Technical Issues</td>
+                  <td>Bugs and Fixes</td>
+                  <td>The client shall receive an acknowledgement response fifteen (15) minutes after receipt of each request. Dojah shall respond promptly to all requests for support services made by the client through the helpdesk.</td>
+                  <td>1-3 hours (Dojah shall communicate to the client if the issue cannot be resolved within this timeline)</td>
+                  <td><a href="mailto:support@dojah.io">support@dojah.io</a></td>
+                </tr>
+                <tr>
+                  <td>New feature requests</td>
+                  <td></td>
+                  <td></td>
+                  <td>Dependent on request</td>
+                  <td><a href="mailto:support@dojah.io">support@dojah.io</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <p className="note">*Support services will be provided from 9am-5pm on Business Days.</p>
         </section>
 
         <section className="signature-section">
           <h2>EXECUTION</h2>
-          
+
           <div className="signature-block">
             <h3>Signed for and on behalf of DOJAH TECHNOLOGIES LIMITED</h3>
             <div className="signature-lines">

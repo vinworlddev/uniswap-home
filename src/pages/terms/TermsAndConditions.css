@@ -1,0 +1,344 @@
+/* Terms and Conditions Styles - Green Theme */
+
+/* :root {
+  --primary-green: #10b981;
+  --dark-green: #059669;
+  --light-green: #34d399;
+  --accent-green: #6ee7b7;
+} */
+
+/* Terms Container */
+.terms-container {
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  padding: 40px 20px;
+  /* background: #ffffff; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Terms Header */
+.terms-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+}
+
+.terms-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.last-updated {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Terms Content */
+/* .terms-content {
+  background: white;
+} */
+
+/* Intro Section */
+.terms-intro {
+  margin-bottom: 40px;
+  padding: 30px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-green);
+}
+
+.terms-intro p {
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.important-notice {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 2px solid var(--primary-green);
+  font-weight: 600;
+  color: var(--dark-green);
+  text-align: center !important;
+  margin-top: 20px !important;
+}
+
+/* Terms Section */
+.terms-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-green);
+}
+
+.terms-section h2 {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--light-green);
+  padding-bottom: 10px;
+}
+
+.terms-section h3 {
+  color: var(--primary-green);
+  font-size: 1.4rem;
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.terms-section p {
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.terms-section strong {
+  color: var(--dark-green);
+  font-weight: 600;
+}
+
+/* Lists */
+.terms-section ul,
+.terms-section ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.terms-section li {
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.terms-section ul li {
+  list-style-type: disc;
+}
+
+.terms-section ol li {
+  list-style-type: lower-alpha;
+}
+
+/* Definitions List */
+.definitions-list {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-green);
+}
+
+.definitions-list p {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f0fdf4;
+  border-radius: 4px;
+  border-left: 3px solid var(--primary-green);
+}
+
+.definitions-list p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Email */
+.contact-email {
+  text-align: center !important;
+  margin-top: 20px !important;
+}
+
+.contact-email a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--light-green);
+}
+
+.contact-email a:hover {
+  background: var(--primary-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Footer */
+.terms-footer {
+  text-align: center;
+  padding: 30px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  margin-top: 40px;
+  border-top: 3px solid var(--primary-green);
+}
+
+.terms-footer p {
+  color: var(--dark-green);
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.terms-footer p:first-child {
+  font-size: 1.1rem;
+}
+
+.terms-footer p:last-child {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Print styles */
+@media print {
+  .terms-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .terms-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  .terms-header {
+    background: var(--dark-green) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .terms-container {
+    padding: 20px 0px;
+  }
+
+    .terms-intro {
+      padding: 30px 15px;
+    }
+  
+  .terms-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .last-updated {
+    font-size: 0.9rem;
+  }
+  
+  .terms-section {
+    padding: 20px 15px;
+  }
+  
+  .terms-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .terms-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .terms-section p,
+  .terms-intro p {
+    font-size: 0.95rem;
+  }
+  
+  .contact-email a {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+
+
+/* Link styling */
+/* a {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+} */
+
+/* Highlight important sections */
+.terms-section:nth-child(2),
+.terms-section:nth-child(3),
+.terms-section:nth-child(13) {
+  background: #ecfdf5;
+  border-left: 4px solid var(--dark-green);
+}
+
+/* Animation for sections */
+.terms-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation delays */
+.terms-intro {
+  animation: fadeInUp 0.6s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+
+.terms-section:nth-child(1) {
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.terms-section:nth-child(2) {
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.terms-section:nth-child(3) {
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+/* Accessibility - Focus indicators */
+a:focus,
+.contact-email a:focus {
+  outline: 3px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent-green);
+  color: var(--dark-green);
+}
+
+::-moz-selection {
+  background: var(--accent-green);
+  color: var(--dark-green);
+}

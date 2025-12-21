@@ -65,15 +65,31 @@ const Footer = () => {
 					<div className="footer-section">
 						<h4 className="footer-heading">Legal</h4>
 						<ul className="footer-links">
-							<li>
+							{/* <li>
 								<Link to="/sla">Service Level Agreement</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link to="/terms">Terms & Conditions</Link>
 							</li>
 							<li>
 								<Link to="/privacy">Privacy Policy</Link>
 							</li>
+							<li>
+								<Link to="/escrow-policy">Escrow Policy</Link>
+							</li>
+							<li>
+								<Link to="/refund-policy">Refund Policy</Link>
+							</li>
+							<li>
+								<Link to="/ticketing-terms">Ticketing Terms</Link>
+							</li>
+							<li>
+								<Link to="/organizer-terms">Organizer Terms</Link>
+							</li>
+							<li>
+								<Link to="/escrow-guide">How does escrow work?</Link>
+							</li>
+							
 							<li>
 								<a 
 									href="https://www.dojah.io" 
@@ -145,11 +161,15 @@ const Footer = () => {
 							© {currentYear} Uniswap NG. All rights reserved.
 						</p>
 						<div className="footer-bottom-links">
-							<Link to="/sla">SLA</Link>
-							<span className="separator">•</span>
+							{/* <Link to="/sla">SLA</Link>
+							<span className="separator">•</span> */}
 							<Link to="/terms">Terms</Link>
 							<span className="separator">•</span>
 							<Link to="/privacy">Privacy</Link>
+							<span className="separator">•</span>
+							<Link to="/escrow-policy">Escrow Policy</Link>
+							<span className="separator">•</span>
+							<Link to="/escrow-guide">Learn about Escrow Protection</Link>
 						</div>
 					</div>
 				</div>

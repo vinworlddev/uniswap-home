@@ -1,0 +1,221 @@
+/* Scroll to Top Button Styles - Green Theme */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+}
+
+/* Visible State */
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover State */
+.scroll-to-top:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.5);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+/* Active/Clicking State */
+.scroll-to-top:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* Scrolling Animation */
+.scroll-to-top.scrolling {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.1);
+  }
+}
+
+/* Icon */
+.scroll-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover .scroll-icon {
+  transform: translateY(-2px);
+  animation: bounceUp 0.6s ease-in-out infinite;
+}
+
+@keyframes bounceUp {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Text Label */
+.scroll-text {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: -2px;
+}
+
+/* Focus State (Accessibility) */
+.scroll-to-top:focus {
+  outline: none;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4), 
+              0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.scroll-to-top:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .scroll-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scroll-text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .scroll-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .scroll-text {
+    font-size: 0.55rem;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .scroll-to-top:hover {
+    transform: none;
+  }
+
+  .scroll-icon,
+  .scroll-to-top.scrolling {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .scroll-to-top {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Print - Hide Button */
+@media print {
+  .scroll-to-top {
+    display: none;
+  }
+}
+
+/* Alternative Styles - Uncomment to use */
+
+/* Minimal Style (Icon Only) */
+/*
+.scroll-to-top {
+  width: 48px;
+  height: 48px;
+}
+
+.scroll-text {
+  display: none;
+}
+*/
+
+/* Square Style */
+/*
+.scroll-to-top {
+  border-radius: 12px;
+}
+*/
+
+/* Larger Size */
+/*
+.scroll-to-top {
+  width: 64px;
+  height: 64px;
+}
+
+.scroll-icon {
+  width: 28px;
+  height: 28px;
+}
+*/
+
+/* Different Position (Left Side) */
+/*
+.scroll-to-top {
+  right: auto;
+  left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    left: 1rem;
+  }
+}
+*/

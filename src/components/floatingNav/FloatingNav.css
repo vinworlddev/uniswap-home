@@ -1,0 +1,509 @@
+/* Floating Navigation - Assistive Touch Style */
+
+.floating-nav {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+/* When draggable, remove centering transform */
+.floating-nav[style*="left"] {
+  transform: none;
+}
+
+/* Main Button */
+.floating-nav-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4),
+    0 0 0 0 rgba(16, 185, 129, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 10;
+}
+
+.floating-nav-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.5),
+    0 0 0 10px rgba(16, 185, 129, 0.1);
+}
+
+.floating-nav-button:active {
+  transform: scale(0.95);
+}
+
+/* Button Open State */
+.floating-nav.open .floating-nav-button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 8px 30px rgba(239, 68, 68, 0.4);
+}
+
+/* Dragging State */
+.floating-nav.dragging .floating-nav-button {
+  cursor: grabbing;
+  transform: scale(1.1);
+  box-shadow: 0 15px 50px rgba(16, 185, 129, 0.6);
+}
+
+/* Icons */
+.icon-menu,
+.icon-close {
+  width: 32px;
+  height: 32px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.floating-nav-button:hover .icon-menu,
+.floating-nav-button:hover .icon-close {
+  transform: rotate(90deg);
+}
+
+/* Expanded Menu */
+.floating-nav-menu {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 1rem);
+  /* Position to the left of button with 1rem gap */
+  transform: translateY(-50%);
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  min-width: 320px;
+  animation: menuExpandFromRight 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 5;
+}
+
+@keyframes menuExpandFromRight {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(20px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) scale(1);
+  }
+}
+
+/* Menu positioning for center/left button positions */
+.floating-nav.position-center .floating-nav-menu,
+.floating-nav.position-left .floating-nav-menu {
+  right: auto;
+  left: calc(100% + 1rem);
+  /* Position to the right of button */
+  animation: menuExpandFromLeft 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes menuExpandFromLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-20px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) scale(1);
+  }
+}
+
+/* Menu Header */
+.menu-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.menu-header h3 {
+  color: #059669;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.menu-header h3::before {
+  content: '⚖️';
+  font-size: 1.5rem;
+}
+
+.menu-header p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Menu Items */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 2px solid #d1fae5;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #065f46;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: itemSlideIn 0.4s ease backwards;
+}
+
+@keyframes itemSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-item:hover {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border-color: #10b981;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+.menu-item:active {
+  transform: translateX(3px) scale(0.98);
+}
+
+/* Item Icon */
+.item-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Item Label */
+.item-label {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Item Arrow */
+.item-arrow {
+  font-size: 1.2rem;
+  color: #10b981;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover .item-arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Menu Footer */
+.menu-footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.close-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.close-button:active {
+  transform: translateY(0);
+}
+
+/* Draggable Hint */
+.drag-hint {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Focus States (Accessibility) */
+.floating-nav-button:focus {
+  outline: none;
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4),
+    0 0 0 4px rgba(16, 185, 129, 0.3);
+}
+
+.menu-item:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.close-button:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-nav {
+    right: 1.5rem;
+  }
+
+  .floating-nav-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-menu,
+  .icon-close {
+    width: 28px;
+    height: 28px;
+  }
+
+  .floating-nav-menu {
+    min-width: 280px;
+    padding: 1.25rem;
+  }
+
+  /* Adjust menu position on tablet for right-side button */
+  .floating-nav.position-right .floating-nav-menu {
+    right: calc(100% + 0.75rem);
+    /* Smaller gap on tablet */
+  }
+
+  .menu-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .menu-item {
+    padding: 0.875rem;
+  }
+
+  .item-icon {
+    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .item-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-nav {
+    right: 1rem;
+  }
+
+  .floating-nav-button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .icon-menu,
+  .icon-close {
+    width: 24px;
+    height: 24px;
+  }
+
+  .floating-nav-menu {
+    min-width: 260px;
+    max-width: calc(100vw - 40px);
+    padding: 1rem;
+  }
+
+  /* On very small screens, position menu to not overflow */
+  .floating-nav.position-right .floating-nav-menu {
+    right: calc(100% + 0.5rem);
+    /* Smaller gap on mobile */
+    max-width: calc(100vw - 80px);
+    /* Account for button + gaps */
+  }
+
+  .menu-header h3 {
+    font-size: 1rem;
+  }
+
+  .menu-header p {
+    font-size: 0.85rem;
+  }
+
+  .menu-item {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .item-icon {
+    font-size: 1.4rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .item-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* Alternative Position Styles */
+.floating-nav.position-center {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+
+.floating-nav.position-left {
+  left: 20px;
+  right: auto;
+  transform: translateY(-50%);
+}
+
+.floating-nav.position-right {
+  right: 2rem;
+  left: auto;
+  transform: translateY(-50%);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+  .floating-nav-button,
+  .menu-item,
+  .item-arrow,
+  .close-button {
+    transition: none;
+    animation: none;
+  }
+
+  .floating-nav-menu {
+    animation: none;
+  }
+
+  .floating-nav-button:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .floating-nav-button {
+    border: 2px solid currentColor;
+  }
+
+  .menu-item {
+    border-width: 3px;
+  }
+}
+
+/* Print - Hide */
+@media print {
+  .floating-nav {
+    display: none;
+  }
+}
+
+/* Backdrop Blur Effect (Optional - Uncomment to use) */
+/*
+.floating-nav.open::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+*/
+
+/* Custom Color Variants for Menu Items */
+.menu-item[style*="--item-color"] .item-icon {
+  background: linear-gradient(135deg, var(--item-color), var(--item-color));
+  filter: brightness(1.9) saturate(0.5);
+}
+
+/* Pulsing Animation for Main Button */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4),
+      0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4),
+      0 0 0 15px rgba(16, 185, 129, 0);
+  }
+
+  100% {
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4),
+      0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Add pulse on page load */
+.floating-nav-button {
+  animation: pulse 2s ease-in-out 3;
+}

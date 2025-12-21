@@ -1,0 +1,436 @@
+/* Refund Policy Styles - Green Theme */
+
+.refund-policy-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #d1fae5 100%);
+  padding: 2rem 1rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Section */
+.refund-policy-header {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(16, 185, 129, 0.25);
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.refund-policy-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.refund-policy-header .effective-date {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Content Container */
+.refund-policy-content {
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Introduction Section */
+.refund-policy-intro {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-left: 5px solid #10b981;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  animation: fadeInUp 0.6s ease-out;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.refund-policy-intro p {
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0 0 1rem 0;
+}
+
+.refund-policy-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-agreement {
+  font-weight: 600;
+  color: #059669;
+  margin-top: 1rem;
+}
+
+/* Section Styles */
+.refund-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #fafafa;
+  border-radius: 16px;
+  border: 2px solid #e5e7eb;
+  animation: fadeInUp 0.6s ease-out backwards;
+  transition: all 0.3s ease;
+}
+
+.refund-section:hover {
+  border-color: #10b981;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+}
+
+.refund-section:nth-child(2) { animation-delay: 0.1s; }
+.refund-section:nth-child(3) { animation-delay: 0.15s; }
+.refund-section:nth-child(4) { animation-delay: 0.2s; }
+.refund-section:nth-child(5) { animation-delay: 0.25s; }
+.refund-section:nth-child(6) { animation-delay: 0.3s; }
+.refund-section:nth-child(7) { animation-delay: 0.35s; }
+.refund-section:nth-child(8) { animation-delay: 0.4s; }
+.refund-section:nth-child(9) { animation-delay: 0.45s; }
+.refund-section:nth-child(10) { animation-delay: 0.5s; }
+.refund-section:nth-child(11) { animation-delay: 0.55s; }
+.refund-section:nth-child(12) { animation-delay: 0.6s; }
+.refund-section:nth-child(13) { animation-delay: 0.65s; }
+
+.refund-section h2 {
+  color: #059669;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #d1fae5;
+}
+
+.refund-section > p {
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.refund-section > ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.25rem 0;
+}
+
+.refund-section > ul > li {
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.refund-section > ul > li::before {
+  content: "•";
+  position: absolute;
+  left: 0.75rem;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Subsection Styles */
+.subsection {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid #34d399;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.subsection:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.subsection h3 {
+  color: #10b981;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.subsection p {
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+}
+
+.subsection p:last-child {
+  margin-bottom: 0;
+}
+
+.subsection ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.subsection ul li {
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.subsection ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Important Subsection */
+.important-subsection {
+  background: linear-gradient(135deg, #fef3c7 0%, #fef3c7 100%);
+  border-left-color: #f59e0b;
+}
+
+.important-subsection h3 {
+  color: #d97706;
+}
+
+/* Warning Section */
+.warning-section {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-color: #fbbf24;
+}
+
+.warning-section h2 {
+  color: #d97706;
+  border-bottom-color: #fbbf24;
+}
+
+/* Highlight Text */
+.highlight-text {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #10b981;
+  color: #065f46;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+/* Warning Text */
+.warning-text {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ef4444;
+  color: #991b1b;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+/* Contact Email */
+.contact-email {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.contact-email a {
+  color: #10b981;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 3px solid #34d399;
+  padding-bottom: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.contact-email a:hover {
+  color: #059669;
+  border-bottom-color: #10b981;
+}
+
+/* Footer */
+.refund-policy-footer {
+  text-align: center;
+  padding: 2rem 0 0 0;
+  margin-top: 3rem;
+  border-top: 2px solid #e5e7eb;
+  color: #6b7280;
+}
+
+.refund-policy-footer p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .refund-policy-container {
+    padding: 1rem 0.5rem;
+  }
+
+
+
+  .refund-policy-header {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+
+  .refund-policy-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .refund-policy-header .effective-date {
+    font-size: 1rem;
+  }
+
+  .refund-policy-content {
+    padding: 2rem 1rem;
+    border-radius: 16px;
+  }
+
+  .refund-policy-intro {
+    padding: 1rem;
+  }
+
+  .refund-section {
+    padding: 1rem;
+  }
+
+  .refund-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .subsection {
+    padding: 1rem;
+  }
+
+  .subsection h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .refund-policy-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .refund-policy-header .effective-date {
+    font-size: 0.9rem;
+  }
+
+  .refund-policy-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .refund-section {
+    padding: 1rem;
+  }
+
+  .refund-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .subsection h3 {
+    font-size: 1rem;
+  }
+
+  .subsection p,
+  .subsection ul li {
+    font-size: 0.95rem;
+  }
+
+  .contact-email a {
+    font-size: 1.05rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .refund-policy-container {
+    background: white;
+    padding: 0;
+  }
+
+  .refund-policy-header {
+    background: #10b981;
+    color: white;
+    box-shadow: none;
+  }
+
+  .refund-policy-content {
+    box-shadow: none;
+  }
+
+  .refund-section {
+    page-break-inside: avoid;
+    background: white;
+    border: 1px solid #d1d5db;
+  }
+
+  .subsection {
+    box-shadow: none;
+    border: 1px solid #d1d5db;
+  }
+
+  .warning-section {
+    background: white;
+    border: 2px solid #fbbf24;
+  }
+}

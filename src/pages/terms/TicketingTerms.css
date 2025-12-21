@@ -1,0 +1,476 @@
+/* Ticketing Terms Styles - Green Theme */
+
+.ticketing-terms-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #d1fae5 100%);
+  padding: 2rem 1rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Section */
+.ticketing-terms-header {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(16, 185, 129, 0.25);
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ticketing-terms-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticketing-terms-header .effective-date {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Content Container */
+.ticketing-terms-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Introduction Section */
+.ticketing-terms-intro {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-left: 5px solid #10b981;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  animation: fadeInUp 0.6s ease-out;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ticketing-terms-intro p {
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Section Styles */
+.ticketing-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #fafafa;
+  border-radius: 16px;
+  border: 2px solid #e5e7eb;
+  animation: fadeInUp 0.6s ease-out backwards;
+  transition: all 0.3s ease;
+}
+
+.ticketing-section:hover {
+  border-color: #10b981;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+}
+
+.ticketing-section:nth-child(2) { animation-delay: 0.1s; }
+.ticketing-section:nth-child(3) { animation-delay: 0.15s; }
+.ticketing-section:nth-child(4) { animation-delay: 0.2s; }
+.ticketing-section:nth-child(5) { animation-delay: 0.25s; }
+.ticketing-section:nth-child(6) { animation-delay: 0.3s; }
+.ticketing-section:nth-child(7) { animation-delay: 0.35s; }
+.ticketing-section:nth-child(8) { animation-delay: 0.4s; }
+.ticketing-section:nth-child(9) { animation-delay: 0.45s; }
+.ticketing-section:nth-child(10) { animation-delay: 0.5s; }
+.ticketing-section:nth-child(11) { animation-delay: 0.55s; }
+.ticketing-section:nth-child(12) { animation-delay: 0.6s; }
+.ticketing-section:nth-child(13) { animation-delay: 0.65s; }
+.ticketing-section:nth-child(14) { animation-delay: 0.7s; }
+.ticketing-section:nth-child(15) { animation-delay: 0.75s; }
+.ticketing-section:nth-child(16) { animation-delay: 0.8s; }
+
+.ticketing-section h2 {
+  color: #059669;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #d1fae5;
+}
+
+.ticketing-section > p {
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.ticketing-section > ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.25rem 0;
+}
+
+.ticketing-section > ul > li {
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.ticketing-section > ul > li::before {
+  content: "•";
+  position: absolute;
+  left: 0.75rem;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Subsection Styles */
+.subsection {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid #34d399;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.subsection:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.subsection h3 {
+  color: #10b981;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.subsection p {
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+}
+
+.subsection p:last-child {
+  margin-bottom: 0;
+}
+
+.subsection ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.subsection ul li {
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.subsection ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Important Subsection (No Ticketing Fees) */
+.important-subsection {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border-left-color: #10b981;
+  border-left-width: 5px;
+}
+
+.important-subsection h3 {
+  color: #065f46;
+}
+
+.important-subsection p {
+  color: #065f46;
+  font-weight: 500;
+}
+
+/* Warning Section (QR Codes & Admission) */
+.warning-section {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-color: #fbbf24;
+}
+
+.warning-section h2 {
+  color: #d97706;
+  border-bottom-color: #fbbf24;
+}
+
+.warning-section .subsection {
+  background: white;
+  border-left-color: #f59e0b;
+}
+
+.warning-section .subsection h3 {
+  color: #d97706;
+}
+
+/* Chargeback Section */
+.chargeback-section {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border-color: #fca5a5;
+}
+
+.chargeback-section h2 {
+  color: #dc2626;
+  border-bottom-color: #fca5a5;
+}
+
+.chargeback-section .subsection {
+  background: white;
+  border-left-color: #ef4444;
+}
+
+.chargeback-section .subsection h3 {
+  color: #dc2626;
+}
+
+/* Highlight Text */
+.highlight-text {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #10b981;
+  color: #065f46;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+/* Warning Text */
+.warning-text {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ef4444;
+  color: #991b1b;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+/* Contact Email */
+.contact-email {
+  text-align: center;
+  margin: 1.5rem 0;
+
+}
+
+.contact-email a {
+  color: #10b981;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 3px solid #34d399;
+  padding-bottom: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.contact-email a:hover {
+  color: #059669;
+  border-bottom-color: #10b981;
+}
+
+/* Footer */
+.ticketing-terms-footer {
+  text-align: center;
+  padding: 2rem 0 0 0;
+  margin-top: 3rem;
+  border-top: 2px solid #e5e7eb;
+  color: #6b7280;
+}
+
+.ticketing-terms-footer p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.ticketing-terms-footer a {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.ticketing-terms-footer a:hover {
+  color: #059669;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ticketing-terms-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .ticketing-terms-header {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+
+  .ticketing-terms-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .ticketing-terms-header .effective-date {
+    font-size: 1rem;
+  }
+
+  .ticketing-terms-content {
+    padding: 2rem 1rem;
+    border-radius: 16px;
+  }
+
+  .ticketing-terms-intro {
+    padding: 1.5rem;
+  }
+
+  .ticketing-section {
+    padding: 1rem;
+  }
+
+  .ticketing-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .subsection {
+    padding: 1rem;
+  }
+
+  .subsection h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticketing-terms-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .ticketing-terms-header .effective-date {
+    font-size: 0.9rem;
+  }
+
+  .ticketing-terms-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .ticketing-section {
+    padding: 1rem;
+  }
+
+  .ticketing-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .subsection h3 {
+    font-size: 1rem;
+  }
+
+  .subsection p,
+  .subsection ul li {
+    font-size: 0.95rem;
+  }
+
+  .contact-email a {
+    font-size: 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .ticketing-terms-container {
+    background: white;
+    padding: 0;
+  }
+
+  .ticketing-terms-header {
+    background: #10b981;
+    color: white;
+    box-shadow: none;
+  }
+
+  .ticketing-terms-content {
+    box-shadow: none;
+  }
+
+  .ticketing-section {
+    page-break-inside: avoid;
+    background: white;
+    border: 1px solid #d1d5db;
+  }
+
+  .subsection {
+    box-shadow: none;
+    border: 1px solid #d1d5db;
+  }
+
+  .warning-section,
+  .chargeback-section {
+    background: white;
+    border: 2px solid #fbbf24;
+  }
+}
