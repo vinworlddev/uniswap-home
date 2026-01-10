@@ -9,19 +9,26 @@ const Footer = () => {
 				<div className="footer-content">
 					{/* Company Info */}
 					<div className="footer-section">
-						<div className="footer-logo">
-							<img 
-								src="assets/images/logo.png" 
-								alt="Uniswap NG" 
-								className="h-14 md:h-16"
-							/>
+						<div className="footer-logo flex items-center gap-2">
+							<img src="/assets/images/logo_icon.png" alt="Uniswapng Logo" className="w-10 h-10 rounded-full object-cover" />
+							<span className="text-2xl md:text-3xl font-bold">
+								<span className="text-gray-900">Uni</span>
+								<span className="text-green-500">swap</span>
+								<span className="text-gray-900">ng</span>
+							</span>
 						</div>
+
+						<h4 className="footer-heading">Disclaimer</h4>
 						<p className="footer-description">
 							UniswapNG is a digital facilitation platform, not a bank, seller, event promoter
 							or financial institution. Payments and settlements are handled through
 							licensed third-party providers. Users transact at their own risk under the
 							Platform’s policies.
 							
+						</p>
+						<p className="footer-description">
+							Uniswapng is an independent platform and is not affiliated with, endorsed by, sponsored by,
+							or connected to Uniswap Labs, the Uniswap Protocol, or any of their subsidiaries.
 						</p>
 						<div className="footer-social">
 							<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
@@ -49,15 +56,10 @@ const Footer = () => {
 							<li>
 								<Link to="/">Home</Link>
 							</li>
-							{/* <li>
-								<Link to="/buy">Buy Crypto</Link>
-							</li>
 							<li>
-								<Link to="/sell">Sell Crypto</Link>
+								<Link to="/about">About</Link>
 							</li>
-							<li>
-								<Link to="/transactions">Transactions</Link>
-							</li> */}
+
 						</ul>
 					</div>
 
@@ -142,7 +144,7 @@ const Footer = () => {
 				</div>
 
 				{/* Security Badge */}
-				<div className="footer-security">
+				{/* <div className="footer-security">
 					<div className="security-badge">
 						<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -152,7 +154,7 @@ const Footer = () => {
 							<p className="text-xs opacity-75">KYC & Identity Verification</p>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				{/* Bottom Bar */}
 				<div className="footer-bottom">

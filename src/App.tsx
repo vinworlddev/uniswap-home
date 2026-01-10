@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css'
 import Layout from './layout/Layout';
 import { useThemeMode } from 'flowbite-react';
@@ -18,6 +18,8 @@ import NotFound from './pages/notFound/NotFound';
 import RefundPolicy from './pages/policy/RefundPolicy';
 import TicketingTerms from './pages/terms/TicketingTerms';
 import OrganizerTerms from './pages/terms/OrganizerTerms';
+import AboutUs from './pages/about/AboutUs';
+import { HelmetProvider } from 'react-helmet-async';
 
 type ThemeMode = "light" | "dark";
 const App = () => {
@@ -42,19 +44,20 @@ const App = () => {
   return (
 
     <>
-      <Router>
-        {/* <ScrollToTop />  */}
-        <AuthProvider>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
+      <HelmetProvider>
+        <Router>
+          <ScrollToTop />
+          <AuthProvider>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
 
               <Route path="/admin" element={
                 <ProtectedRoute requireAdmin>
                   <Admin />
                 </ProtectedRoute>
               } />
-              <Route path="/login" element={<Login />} />
+                <Route path="/admin/login" element={<Login />} />
               {/* <Route path="/sla" element={<ServiceLevelAgreement />} /> */}
               <Route path="terms" element={<TermsAndConditions />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
@@ -63,6 +66,7 @@ const App = () => {
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/ticketing-terms" element={<TicketingTerms />} />
               <Route path="/organizer-terms" element={<OrganizerTerms />} />
+                <Route path="/about" element={<AboutUs />} />
               <Route
                 path="/unauthorized"
                 element={
@@ -80,20 +84,21 @@ const App = () => {
           </Routes>
         </AuthProvider>
       </Router>
+      </HelmetProvider>
     </>
   )
 }
 
 // ✅ ScrollToTop Component - Scrolls to top on route changes
-// const ScrollToTop = () => {
-//   const { pathname } = useLocation();
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
-//   useEffect(() => {
-//     // Scroll to top instantly when route changes
-//     window.scrollTo(0, 0);
-//   }, [pathname]);
+  useEffect(() => {
+    // Scroll to top instantly when route changes
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-//   return null;
-// };
+  return null;
+};
 
 export default App

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getWaitlistCount, joinWaitlist, unsubscribeFromWaitlist } from '../../supabase/waitlist';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
 	const [email, setEmail] = useState('');
@@ -84,17 +85,27 @@ const Home = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>UniswapNG - Trusted Marketplace | Buy & Sell Safely with Escrow</title>
+				<meta name="description" content="Join UniswapNG's waitlist for Nigeria's safest student marketplace. Buy and sell textbooks, electronics, and more with secure escrow protection and built-in wallet." />
+				<meta name="keywords" content="student marketplace, buy sell Nigeria, university trading platform, textbooks marketplace, electronics buy sell, secure escrow Nigeria, student trading app" />
+				<link rel="canonical" href="https://uniswapng.com/" />
+			</Helmet>
 			<section className="hero">
 				<div className="hero-badge">🚀 Coming Soon</div>
-				<h1 className="hero-title">Your Trusted Marketplace</h1>
-				<p className="hero-subtitle">Buy and sell new or used products with confidence. Secure escrow payments,
+				<h1 className="hero-title">Less Clutter. More Value. No Stress</h1>
+				{/* <p className="hero-subtitle">Buy and sell new or used products with confidence. Secure escrow payments,
 					built-in wallet, and dedicated account numbers make trading safe and simple.
+				</p> */}
+				<p className="hero-subtitle">
+					Turn things you don't need into cash, or something better safely, simply and securely
 				</p>
+				
 			</section>
 
 			<section className="waitlist-section">
 				<h2 className="waitlist-title">Join the Waitlist</h2>
-				<p className="waitlist-subtitle">Be the first to know when we launch!</p>
+				<p className="waitlist-subtitle">Be the first to make room and get value</p>
 
 				<form className="email-form" onSubmit={handleSubmit}>
 					<input
@@ -138,26 +149,28 @@ const Home = () => {
 
 			<section className="features">
 				<div className="feature-card">
-					<div className="feature-icon">🛡️</div>
-					<h3 className="feature-title">Escrow Protection</h3>
-					<p className="feature-description">Your money stays safe in escrow until you confirm receipt.
-						Both buyers and sellers are protected throughout every transaction.
+					<div className="feature-icon">🔐</div>
+					<h3 className="feature-title">Protected Swaps</h3>
+					<p className="feature-description">
+						Your money stays secure while both sides complete the exchange.
+						Only release when everyone’s good.
 					</p>
 				</div>
 
 				<div className="feature-card">
-					<div className="feature-icon">💳</div>
-					<h3 className="feature-title">Built-in Wallet</h3>
-					<p className="feature-description">Get your dedicated account number for easy wallet top-ups.
-						Make instant transfers and manage your funds with complete control.
+					<div className="feature-icon">💼</div>
+					<h3 className="feature-title">Secure Payments</h3>
+					<p className="feature-description">
+						Add funds easily, receive payments, and keep track of your value all in one place.
 					</p>
 				</div>
 
 				<div className="feature-card">
 					<div className="feature-icon">📦</div>
-					<h3 className="feature-title">List Anything</h3>
-					<p className="feature-description">Upload new or used products with photos and descriptions. From electronics to fashion,
-						sell anything quickly and safely.
+					<h3 className="feature-title">Post Anything</h3>
+					<p className="feature-description">
+						List items you’re done with new or used.
+						Get offers fast and choose what works for you.
 					</p>
 				</div>
 			</section>

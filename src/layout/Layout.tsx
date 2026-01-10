@@ -33,11 +33,48 @@ const Layout = () => {
 
 			<header className="header">
 				<div className="!max-w-7xl !mx-auto px-4">
-					<div className="flex justify-between items-center">
+					<div className="flex justify-between items-center py-6">
 						<div className="w-full">
 							<Link to="/">
-								<div className="logo">
-									<img className="h-16 md:h-20" src="assets/images/logo.png" alt="logo" />
+								<div className="logo flex items-center gap-2">
+									{/* <svg width="40" height="40" viewBox="0 0 100 100" className="flex-shrink-0">
+										
+										<path
+											d="M 30 10 L 30 50 Q 30 75 50 75 Q 70 75 70 50 L 70 10 L 85 10 L 85 50 Q 85 90 50 90 Q 15 90 15 50 L 15 10 Z"
+											fill="url(#gradient-light)"
+										/>
+										
+										<path
+											d="M 30 10 L 30 50 Q 30 70 50 70 L 50 55 Q 40 55 40 50 L 40 10 Z"
+											fill="url(#gradient-dark)"
+											opacity="0.6"
+										/>
+										
+										<path
+											d="M 70 10 L 85 25 L 85 10 Z"
+											fill="url(#gradient-accent)"
+										/>
+										<defs>
+											<linearGradient id="gradient-light" x1="0%" y1="0%" x2="100%" y2="100%">
+												<stop offset="0%" stopColor="#5eead4" />
+												<stop offset="100%" stopColor="#2dd4bf" />
+											</linearGradient>
+											<linearGradient id="gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+												<stop offset="0%" stopColor="#14b8a6" />
+												<stop offset="100%" stopColor="#0d9488" />
+											</linearGradient>
+											<linearGradient id="gradient-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+												<stop offset="0%" stopColor="#2dd4bf" />
+												<stop offset="100%" stopColor="#5eead4" />
+											</linearGradient>
+										</defs>
+									</svg> */}
+									<img src="/assets/images/logo_icon.png" alt="Uniswapng Logo" className="w-10 h-10 rounded-full object-cover" />
+									<span className="text-2xl md:text-3xl font-bold">
+										<span className="text-gray-900">Uni</span>
+										<span className="text-green-500">swap</span>
+										<span className="text-gray-900">ng</span>
+									</span>
 								</div>
 							</Link>
 						</div>
@@ -53,9 +90,10 @@ const Layout = () => {
 									</button>
 								</>
 							) : (
-								<Link to="/login" className="admin-btn">
-									Login
-								</Link>
+								// <Link to="/login" className="admin-btn">
+								// 	Login
+									// </Link>
+								<div></div>
 							)}
 						</div>
 					</div>

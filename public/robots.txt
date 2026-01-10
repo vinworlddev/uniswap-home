@@ -1,0 +1,11 @@
+# robots.txt for UniswapNG
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /admin/login
+
+# Sitemap location
+Sitemap: https://uniswapng.com/sitemap.xml
