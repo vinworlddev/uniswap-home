@@ -20,6 +20,7 @@ import TicketingTerms from './pages/terms/TicketingTerms';
 import OrganizerTerms from './pages/terms/OrganizerTerms';
 import AboutUs from './pages/about/AboutUs';
 import { HelmetProvider } from 'react-helmet-async';
+import ElectronicConsent from './pages/consent/ElectronicConsent';
 
 type ThemeMode = "light" | "dark";
 const App = () => {
@@ -52,38 +53,40 @@ const App = () => {
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
 
-              <Route path="/admin" element={
-                <ProtectedRoute requireAdmin>
-                  <Admin />
-                </ProtectedRoute>
-              } />
+                <Route path="/admin" element={
+                  <ProtectedRoute requireAdmin>
+                    <Admin />
+                  </ProtectedRoute>
+                } />
                 <Route path="/admin/login" element={<Login />} />
-              {/* <Route path="/sla" element={<ServiceLevelAgreement />} /> */}
-              <Route path="terms" element={<TermsAndConditions />} />
-              <Route path="/privacy" element={<PrivacyPolicy />} />
-              <Route path="/escrow-policy" element={<EscrowPolicy />} />
-              <Route path="/escrow-guide" element={<EscrowPolicyUserFriendly />} />
-              <Route path="/refund-policy" element={<RefundPolicy />} />
-              <Route path="/ticketing-terms" element={<TicketingTerms />} />
-              <Route path="/organizer-terms" element={<OrganizerTerms />} />
+                {/* <Route path="/sla" element={<ServiceLevelAgreement />} /> */}
+                <Route path="terms" element={<TermsAndConditions />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/escrow-policy" element={<EscrowPolicy />} />
+                <Route path="/escrow-guide" element={<EscrowPolicyUserFriendly />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
+                <Route path="/ticketing-terms" element={<TicketingTerms />} />
+                <Route path="/organizer-terms" element={<OrganizerTerms />} />
                 <Route path="/about" element={<AboutUs />} />
-              <Route
-                path="/unauthorized"
-                element={
-                  <div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-2xl font-bold text-red-600">Unauthorized</h1>
-                      <p className="text-gray-600 mt-2">You don't have permission to access this page.</p>
+                <Route path="/esign" element={<ElectronicConsent />} />
+
+                <Route
+                  path="/unauthorized"
+                  element={
+                    <div className="min-h-screen flex items-center justify-center">
+                      <div className="text-center">
+                        <h1 className="text-2xl font-bold text-red-600">Unauthorized</h1>
+                        <p className="text-gray-600 mt-2">You don't have permission to access this page.</p>
+                      </div>
                     </div>
-                  </div>
-                }
-                
-              />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </AuthProvider>
-      </Router>
+                  }
+
+                />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </AuthProvider>
+        </Router>
       </HelmetProvider>
     </>
   )

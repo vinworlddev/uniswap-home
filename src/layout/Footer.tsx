@@ -91,6 +91,9 @@ const Footer = () => {
 							<li>
 								<Link to="/escrow-guide">How does escrow work?</Link>
 							</li>
+							<li>
+								<Link to="/esign">E-Concent Agreement</Link>
+							</li>
 							
 							<li>
 								<a 
